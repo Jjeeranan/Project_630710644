@@ -28,86 +28,84 @@ class DetailsPage extends StatelessWidget {
         ),
         child: ListView(
           children: [
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      project.title,
-                      style:const TextStyle(fontSize: 25.0,color: Colors.white70),
-                      overflow: TextOverflow.ellipsis,
-                    ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    project.title,
+                    style:const TextStyle(fontSize: 25.0,color: Colors.white70),
+                    overflow: TextOverflow.ellipsis,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Image.asset(
-                      project.imageUrl,
-                      width: 250.0,
-                      height: 250.0,
-                      fit: BoxFit.cover,
-                    ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Image.asset(
+                    project.imageUrl,
+                    width: 250.0,
+                    height: 250.0,
+                    fit: BoxFit.cover,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      children:[
-                        Expanded(
-                          child: Center(
-                            child: Container(
-                              color:const Color(0xfffef9e7),
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text(
-                                  project.description,
-                                  style:const TextStyle(fontSize: 14.0),
-                                ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children:[
+                      Expanded(
+                        child: Center(
+                          child: Container(
+                            color:const Color(0xfffef9e7),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text(
+                                project.description,
+                                style:const TextStyle(fontSize: 14.0),
                               ),
                             ),
                           ),
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(2.0),
-                    child: Row(
-                      children: [
-                        Expanded(
-                          child: TextButton(
-                              onPressed: (){},
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  const Icon(Icons.more_horiz),
-                                  Text(moreDetails,style:const TextStyle(color: Colors.white),),
-                                  const Icon(Icons.more_horiz),
-                                ],
-                              )
-                          ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(2.0),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: TextButton(
+                            onPressed: (){},
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                const Icon(Icons.more_horiz),
+                                Text(moreDetails,style:const TextStyle(color: Colors.white),),
+                                const Icon(Icons.more_horiz),
+                              ],
+                            )
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(4.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Expanded(
-                          child: Text(
-                            project.time,
-                            style:const TextStyle(fontSize: 14,color: Colors.black38),
-                          ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(4.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Expanded(
+                        child: Text(
+                          project.time,
+                          style:const TextStyle(fontSize: 14,color: Colors.black38),
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
                    Column(
                     children: [
